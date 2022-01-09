@@ -51,7 +51,7 @@ export default class App extends Component {
   }
 
   // this methoid can be called by  child compnenet to update isLoggedIn property of  the state
-  // updateIsLoggedInStatus = (status) => {
-  //   this.setState({ isLoggedIn: status });
-  // };
+  updateIsLoggedInStatus = (status) => {
+    this.setState({ isLoggedIn: status });
+  };
 }
