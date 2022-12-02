@@ -14,6 +14,7 @@ import Navbar from "./Navbar";
 import ShoppingCart from "./ShoppingCart";
 import Login from "./Login";
 import Error from "./Error";
+import { Main } from "./Main";
 
 export default class App extends Component {
   constructor(props) {
@@ -27,7 +28,9 @@ export default class App extends Component {
         <Navbar isLoggedIn={this.state.isLoggedIn} />
         <div className="container-fluid">
           <Routes>
-            <Route
+            <Route exact path="/"></Route>
+            <Route exact path="/login" element={<Login />}></Route>
+            {/* <Route
               exact
               path="/"
               render={(props) => (
@@ -36,15 +39,14 @@ export default class App extends Component {
                   updateIsLoggedInStatus={this.updateIsLoggedInStatus}
                 />
               )}
-            ></Route>
+            ></Route> */}
             {/* <Route exact path="/" element={<Login />}> */}
-              <Route exact path="/customers" element={<MainContent />}> </Route>
-                <Route exact path="/cart" element={<ShoppingCart />}></Route>
-                  <Route exact path="*" element={<Error />}></Route>  </Routes>
-                
-             
-            
-        
+            <Route exact path="/customers" element={<MainContent />}>
+              {" "}
+            </Route>
+            <Route exact path="/cart" element={<ShoppingCart />}></Route>
+            <Route exact path="*" element={<Error />}></Route>{" "}
+          </Routes>
         </div>
       </Router>
     );

@@ -7,7 +7,7 @@ class Navbar extends Component {
       <React.Fragment>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-style ">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               E-commerce
             </a>
             <button
@@ -29,7 +29,7 @@ class Navbar extends Component {
                 {this.props.isLoggedIn == false ? (
                   <li className="nav-item">
                     <NavLink
-                      to="/"
+                      to="/login"
                       className="nav-link"
                       // activeClassName="active"
                       // exact="true"
@@ -41,33 +41,33 @@ class Navbar extends Component {
                   ""
                 )}
 
-                {this.props.isLoggedIn ? (
-                  <li className="nav-item">
-                    <NavLink
-                      to="/cart"
-                      className="nav-link"
-                      // activeClassName="active"
-                    >
-                      Shopping cart
-                    </NavLink>
-                  </li>
-                ) : (
+                {/* {this.props.isLoggedIn ? ( */}
+                <li className="nav-item">
+                  <NavLink
+                    to="/cart"
+                    className="nav-link"
+                    // activeClassName="active"
+                  >
+                    Shopping cart
+                  </NavLink>
+                </li>
+                {/* ) : (
                   ""
-                )}
+                )} */}
 
-                {this.props.isLoggedIn ? (
-                  <li className="nav-item">
-                    <NavLink
-                      to="/customers"
-                      className="nav-link"
-                      // activeClassName="active"
-                    >
-                      Customers
-                    </NavLink>
-                  </li>
-                ) : (
+                {/* {this.props.isLoggedIn ? ( */}
+                <li className="nav-item">
+                  <NavLink
+                    to="/customers"
+                    className="nav-link"
+                    // activeClassName="active"
+                  >
+                    Customers
+                  </NavLink>
+                </li>
+                {/* ) : (
                   ""
-                )}
+                )} */}
 
                 {/* <li className="nav-item">
                   <NavLink
